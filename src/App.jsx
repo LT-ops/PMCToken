@@ -71,7 +71,7 @@ export default function App() {
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/feather-bg.png)`,
         }}
-      ></div>
+      />
 
       {/* ABOUT */}
       <section className="px-8 py-16 text-center">
@@ -208,19 +208,34 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="px-8 py-10 text-center bg-black/50">
-        <p className="opacity-80">
-          © {new Date().getFullYear()} Peacock Ecosystem — The Bonded Bird That
-          Burns to Earn.
+        <p
+          className="opacity-90 font-semibold text-xl mt-2"
+          style={{
+            background: "linear-gradient(to right, #5eead4, #3b82f6)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textShadow:
+              "0 0 10px rgba(45,212,191,0.4), 0 0 20px rgba(59,130,246,0.3)",
+            animation: "glowPulse 3s ease-in-out infinite",
+          }}
+        >
+          🦚 Peacock Ecosystem — Built on PulseChain.
+          <br />
+          “The Bonded Bird That Burns to Earn.” © {new Date().getFullYear()}
         </p>
+
         <div className="mt-4 flex flex-wrap justify-center gap-4 text-teal-300">
-          <a href="#" className="underline underline-offset-4">
+          <a
+            href="#"
+            className="underline underline-offset-4 hover:text-teal-200 transition"
+          >
             Home
           </a>
           <a
             href="https://app.pulsex.com/swap?outputCurrency=0x71769F8F268D4ee21b4749d00Ebe86b734A85389&chain=pulsechain"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4"
+            className="underline underline-offset-4 hover:text-teal-200 transition"
           >
             Buy
           </a>
@@ -228,7 +243,7 @@ export default function App() {
             href="https://t.me/Peacock_MasterCock_Cards"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4"
+            className="underline underline-offset-4 hover:text-teal-200 transition"
           >
             Telegram
           </a>
@@ -236,7 +251,7 @@ export default function App() {
             href="https://x.com/PcockM5954?t=cUCE2vXZ_AAtPIS1aeXuXg&s=09"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4"
+            className="underline underline-offset-4 hover:text-teal-200 transition"
           >
             Twitter
           </a>
@@ -244,11 +259,12 @@ export default function App() {
             href="https://dexscreener.com/pulsechain/0x97946a52c78effc09774d6dccd098982105d6449"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-4"
+            className="underline underline-offset-4 hover:text-teal-200 transition"
           >
             Chart
           </a>
         </div>
+
         <div className="mt-6 text-2xl animate-spin-slow">🦚</div>
       </footer>
     </div>

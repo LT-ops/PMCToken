@@ -10,3 +10,17 @@
 .animate-spin-slow {
   animation: spin-slow 10s linear infinite;
 }
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 8px rgba(45, 212, 191, 0.4),
+      0 0 16px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(45, 212, 191, 0.7),
+      0 0 32px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(45, 212, 191, 0.4),
+      0 0 16px rgba(59, 130, 246, 0.2);
+  }
+}
