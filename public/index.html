@@ -23,21 +23,42 @@
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Inline style for glowing footer text -->
+    <style>
+      @keyframes glowPulse {
+        0% {
+          text-shadow: 0 0 8px rgba(45, 212, 191, 0.4),
+            0 0 16px rgba(59, 130, 246, 0.2);
+        }
+        50% {
+          text-shadow: 0 0 16px rgba(45, 212, 191, 0.7),
+            0 0 32px rgba(59, 130, 246, 0.5);
+        }
+        100% {
+          text-shadow: 0 0 8px rgba(45, 212, 191, 0.4),
+            0 0 16px rgba(59, 130, 246, 0.2);
+        }
+      }
+
+      .glow-footer {
+        text-align: center;
+        font-family: "Inter", sans-serif;
+        margin-top: 1.5rem;
+        background: linear-gradient(to right, #5eead4, #3b82f6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glowPulse 3s ease-in-out infinite;
+      }
+    </style>
   </head>
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <!-- Custom Footer Text -->
-    <p
-      style="
-        text-align: center;
-        color: #7fffd4;
-        font-family: Inter, sans-serif;
-        margin-top: 1rem;
-      "
-    >
+    <!-- Custom Glowing Footer Text -->
+    <p class="glow-footer">
       🦚 <strong>Peacock Ecosystem</strong> — Built on PulseChain.<br />
       “The Bonded Bird That Burns to Earn.” © 2025
     </p>
